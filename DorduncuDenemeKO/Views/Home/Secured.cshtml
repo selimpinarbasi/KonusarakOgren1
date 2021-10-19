@@ -1,0 +1,192 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    var baslik1 = ViewData["baslik1"] as string;
+    var baslik2 = ViewData["baslik2"] as string;
+    var baslik3 = ViewData["baslik3"] as string;
+    var baslik4 = ViewData["baslik4"] as string;
+    var baslik5 = ViewData["baslik5"] as string;
+
+    var yazi1 = ViewData["yazi1"] as string;
+    var yazi2 = ViewData["yazi2"] as string;
+    var yazi3 = ViewData["yazi3"] as string;
+    var yazi4 = ViewData["yazi4"] as string;
+    var yazi5 = ViewData["yazi5"] as string;
+}
+
+<script>
+    function func() {
+
+        var d = document.getElementById("dselect");
+        var disp = d.options[d.selectedIndex].text;
+        @*Option1 document.getElementById("yazi1").innerText = disp;*@
+        document.getElementById("yaziFull").value = disp;
+        
+    }
+</script>
+@for (int i = 1; i < 6; i++)
+{
+    <div>
+        <select id="dselect" onchange="func()";>
+            <option selected disabled>Yazı seçin</option>
+            <option>@baslik1</option>
+            <option>@baslik2</option>
+            <option>@baslik3</option>
+            <option id="baslik4">@baslik4</option>
+            <option value="5">@baslik5</option>
+
+        </select>
+
+    </div>
+    <div>
+<textarea rows="10" cols="100" name="yaziFull" id="yaziFull" onchange="func()";>
+
+</textarea>
+
+        <p><input type="text" name="soru@i" value="Soru @i)" /></p>
+        <p><input type="text" name="cevapA" value="A)" /></p>
+        <p><input type="text" name="cevapB" value="B)" /></p>
+        <p><input type="text" name="cevapC" value="C)" /></p>
+        <p><input type="text" name="cevapD" value="D)" /></p>
+    </div>
+    <div>
+        <select>
+            <option selected disabled>Doğru Cevap</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+        </select>
+    </div>
+    <p>--------------------------------------------------------------------------------------</p>
+}
+@*<div>
+        <select id="dselect" onchange="func()";>
+            <option>Yazı seçin</option>
+            <option>@baslik1</option>
+            <option>@baslik2</option>
+            <option>@baslik3</option>
+            <option>@baslik4</option>
+            <option>@baslik5</option>
+
+        </select>
+    </div>
+        <div>
+        <textarea rows="10" cols="100" name="yaziFull" id="yazi1">
+
+        </textarea>
+            <p><input type="text" name="soru1" placeholder="Soru 1" width="200" /></p>
+            <p><input type="text" name="cevapA" placeholder="A)" /></p>
+            <p><input type="text" name="cevapB" placeholder="B)" /></p>
+            <p><input type="text" name="cevapC" placeholder="C)" /></p>
+            <p><input type="text" name="cevapD" placeholder="D)" /></p>
+        </div>
+        <div>
+            <select>
+                <option selected disabled>Doğru Cevap</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+            </select>
+        </div>
+        <p>--------------------------------------------------------------------------------------</p>
+        <div>
+            <select>
+                <option selected disabled>Yazı seçin</option>
+                <option value="1">@baslik1</option>
+                <option value="2">@baslik2</option>
+                <option value="3">@baslik3</option>
+                <option value="4">@baslik4</option>
+                <option value="5">@baslik5</option>
+
+            </select>
+        </div>
+        <div>
+        <textarea rows="10" cols="100" name="yaziFull" id="yazi2">
+
+        </textarea>
+            <p><input type="text" name="soru2" placeholder="Soru 2" width="200" /></p>
+            <p><input type="text" name="cevapA" placeholder="A)" /></p>
+            <p><input type="text" name="cevapB" placeholder="B)" /></p>
+            <p><input type="text" name="cevapC" placeholder="C)" /></p>
+            <p><input type="text" name="cevapD" placeholder="D)" /></p>
+        </div>
+        <div>
+            <select>
+                <option selected disabled>Doğru Cevap</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+            </select>
+        </div>
+        <p>--------------------------------------------------------------------------------------</p>
+
+        <div>
+            <select>
+                <option selected disabled>Yazı seçin</option>
+                <option value="1">@baslik1</option>
+                <option value="2">@baslik2</option>
+                <option value="3">@baslik3</option>
+                <option value="4">@baslik4</option>
+                <option value="5">@baslik5</option>
+
+            </select>
+        </div>
+        <div>
+
+        <textarea rows="10" cols="100" name="yaziFull" id="yazi3">
+
+        </textarea>
+
+            <p><input type="text" name="soru3" placeholder="Soru 3" width="200" /></p>
+            <p><input type="text" name="cevapA" placeholder="A)" /></p>
+            <p><input type="text" name="cevapB" placeholder="B)" /></p>
+            <p><input type="text" name="cevapC" placeholder="C)" /></p>
+            <p><input type="text" name="cevapD" placeholder="D)" /></p>
+        </div>
+        <div>
+            <select>
+                <option selected disabled>Doğru Cevap</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+            </select>
+        </div>
+        <p>--------------------------------------------------------------------------------------</p>
+
+        <div>
+            <select>
+                <option selected disabled>Yazı seçin</option>
+                <option value="1">@baslik1</option>
+                <option value="2">@baslik2</option>
+                <option value="3">@baslik3</option>
+                <option value="4">@baslik4</option>
+                <option value="5">@baslik5</option>
+
+            </select>
+            <button onclick="func()">a</button>
+        </div>
+        <div>
+        <textarea rows="10" cols="100" name="yaziFull" id="yazi4">
+
+        </textarea>
+            <p><input type="text" name="soru4" placeholder="Soru 4" width="200" /></p>
+            <p><input type="text" name="cevapA" placeholder="A)" /></p>
+            <p><input type="text" name="cevapB" placeholder="B)" /></p>
+            <p><input type="text" name="cevapC" placeholder="C)" /></p>
+            <p><input type="text" name="cevapD" placeholder="D)" /></p>
+        </div>
+        <div>
+            <select>
+                <option selected disabled>Doğru Cevap</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+                <option value="4">D</option>
+            </select>
+        </div>*@
